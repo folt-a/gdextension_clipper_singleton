@@ -37,12 +37,11 @@ if env["platform"] == "macos":
     )
 else:
     library = env.SharedLibrary(
-        "{}/bin/lib{}.{}.{}.{}{}".format(
+        "{}/bin/lib{}.{}.{}.{}".format(
             addon_path,
             project_name,
             env["platform"],
             env["target"],
-            env["arch_suffix"],
             env["SHLIBSUFFIX"],
         ),
         source=sources,
